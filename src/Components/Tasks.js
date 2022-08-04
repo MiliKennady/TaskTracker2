@@ -1,30 +1,20 @@
 import React from "react";
 import Task from "./Task";
 
-const tasks = [
-  {
-    id: 1,
-    text: "Doc Appointment",
-  },
-  {
-    id: 2,
-    text: "Get Veggies",
-  },
-  {
-    id: 3,
-    text: "Buy Milk",
-  },
-];
 
-const Tasks = () => {
+
+const Tasks = ({tasks, onDelete, onToggle}) => {
+ 
   return (
     <div>
       <div>Tasks</div>
-      <div>
+      {tasks.length>0 ? 
+      (<div>
         {tasks.map((task) => (
-          <Task key={task.id} task={task}/>
+          <Task key={task.id} task={task} onDelete = {onDelete} onToggle = {onToggle}/>
         ))}
-      </div>
+      </div>) 
+      : (<p>Completed all tasks</p>) }
     </div>
   );
 };

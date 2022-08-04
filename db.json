@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "text": "Get drunk",
+      "day": "today",
+      "reminder": false,
+      "id": 1
+    },
+    {
+      "text": "KImesoda",
+      "day": "888",
+      "reminder": true,
+      "id": 3
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types'
 
-const Button = ({onClickMili}) => {
-  return <button className="btn" onClick={onClickMili}>Add</button>;
+const Button = ({toggleAddButton, color, text}) => {
+  return <button style={{backgroundColor:color}} className="btn" onClick={toggleAddButton} >{text}</button>;
 };
 
 Button.propTypes = {

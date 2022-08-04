@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import Button from "./Button";
 
-const Header = ({ title, name }) => {
+const Header = ({ title, name, toggleAddButton,showAdd }) => {
   
     const onClickTest = (e) => {
     console.log("Clicked", e);
@@ -15,7 +15,8 @@ const Header = ({ title, name }) => {
         Task Tracker {title} {name}
       </h1> */}
       <h1>Task Tracker</h1>
-      <Button onClickMili={onClickTest} />
+      <Button onClickMili={onClickTest} toggleAddButton={toggleAddButton}  
+      color={showAdd?'Red':'Green'} text={showAdd?'Close':'Add'}/>
     </header>
   );
 };
@@ -35,8 +36,8 @@ Header.propTypes = {
 //     color : "red",
 //     backgroundColor : "black"
 // }
-{
-  /* <h1 style = { headerStyling}></h1>  no need of double bracing here dumbo!!*/
-}
+// {
+//   /* <h1 style = { headerStyling}></h1>  no need of double bracing here dumbo!!*/
+// }
 
 export default Header;
